@@ -1,0 +1,11 @@
+%% Deal with missing data in the Dataset
+isTheDateANaN = isnan(dates)
+okdates = dates(~isTheDateANaN)% pick out the NaN data in dates
+okunc2s = unc2s(~isTheDateANaN)% pick out the NaN data in unc
+%% Do some plotting
+plot(okdates, okunc2s, '.')
+ylim = [0 300]
+xlim = [0 300]
+ax1 = gca % get current axis
+ax1.FontName = 'Papyrus'
+ax1.FontSize = 24
