@@ -1,11 +1,18 @@
-%% Deal with missing data in the Dataset
+%% Deal with missing data in the Dataset--------------------------
 isTheDateANaN = isnan(dates)
 okdates = dates(~isTheDateANaN)% pick out the NaN data in dates
 okunc2s = unc2s(~isTheDateANaN)% pick out the NaN data in unc
-%% Do some plotting
+%% Do some plotting-----------------------------------------------
 plot(okdates, okunc2s, '.')
 ylim = [0 300]
 xlim = [0 300]
 ax1 = gca % get current axis
 ax1.FontName = 'Papyrus'
 ax1.FontSize = 24
+%% Plot directly in work space--------------------------------------
+histogram(dates, 10) % 10 is the bins in the historgram
+%-------------------------------------------------------------------
+% Access:https://www.mathworks.com/products/matlab/plot-gallery.html
+%% Simple plot
+lineData = plot([0 300], [0 300]) % X data [0 300]; Y data [0 300]
+lineData.LineWidth = 3
