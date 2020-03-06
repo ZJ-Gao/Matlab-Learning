@@ -1,4 +1,4 @@
-# Random
+# Random and Probabilty
 
 ```text
 % generate 1 row 10 columns random numbers
